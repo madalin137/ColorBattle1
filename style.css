@@ -1,0 +1,64 @@
+body {	
+	margin: 0px;
+	padding: 0px;
+	font-family: arial;
+	color: #fff;
+	background-image: url("color-splash-6745-1920x1200.jpeg");
+}
+
+canvas {
+	position: fixed;
+	border: none;
+	cursor: crosshair;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+.ui {
+	-webkit-user-select: none;
+	position: fixed;
+	cursor: crosshair;
+	
+	background-image: url("color-splash-6745-1920x1200.jpeg");
+	height: auto;
+	width: 100%;
+	z-index: 1;
+	
+	font-size: 10px;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0px;
+	cursor: crosshair;
+	
+	background-image: url("color-splash-6745-1920x1200.jpeg");
+	height: 22px;
+	width: 100%;
+	z-index: 1;
+}
+
+#score, #credits, #pause, #restart {
+	width: auto;
+	padding: 5px;
+	
+	text-align: center;
+}
+
+#score {
+	float: left;
+}
+
+.button {
+	float: right;
+}
+
+.button:hover{
+	padding: 10px;
+	background-image: url("color-splash-6745-1920x1200.jpeg");;
+}
+
+#clearfix {
+	clear: both;
+}
