@@ -1,4 +1,3 @@
-//marime centru
 var coreRadius = 140;
 var ringRadius = 35;
 var turretRadius = 10;
