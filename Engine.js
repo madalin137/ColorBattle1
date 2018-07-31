@@ -2,17 +2,12 @@ var canvas, ctx;
 
 var Engine = (function()
 {
-	/*munitie*/
-	//Player ammo constants
+
 	var ammoVelocity = 10;
 	var ammoRadius = 10;
 	var ammoColor =  'rgba(0, 112, 255, 0.5)';
-	
-	//constante
 	var enemyRadius = 20;
 	var enemyColor = 'rgba(255, 0, 48, 0.5)';
-	
-	/*--*/
 	var player;
 	var shots = [];
 	
@@ -170,19 +165,16 @@ var Engine = (function()
 			enemies[i].move(false);
 			enemies[i].draw();
 			
-			//Get distance from player core
 			dx = enemies[i].x - player.core.x;
 			dy = enemies[i].y - player.core.y;
 			distance = Math.sqrt(dx * dx + dy * dy);
 			
-			//Check if enemy touched core
 			if (distance <= (enemies[i].radius + player.core.radius)) {
 				player.core.radius -= enemies[i].radius;
 				enemies.splice(i, 1);
 				continue;
 			}
 			
-			//Check if enemy hit by shot from player
 			for (j = 0; j < shots.length; ++j) {
 				var dx = shots[j].x - enemies[i].x
 				var dy = shots[j].y - enemies[i].y
